@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 链接到table.css -->
+    <link rel="stylesheet" href="/static/css/table.css">
+</head>
+<body>
+<table>
+    <thead>
+    <tr>
+        <th>UserNumber</th>
+        <th>UserName</th>
+        <th>UserPwd</th>
+        <th>Dept</th>
+    </tr>
+    <tbody>
+    {% for index in range(df.shape[0]) %}
+    <tr>
+        <td>{{ df.loc[index, 'UserNumber'] }}</td>
+        <td>{{ df.loc[index, 'UserName'] }}</td>
+        <td>{{ df.loc[index, 'UserPwd'] }}</td>
+        <td>{{ df.loc[index, 'Dept'] }}</td>
+    </tr>
+{% endfor %}
+
+    </tbody>
+    </thead>
+</table>
+</body>
+</html>

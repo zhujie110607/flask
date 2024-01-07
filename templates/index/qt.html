@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>{{ df.loc[0, 'UserNumber'] }}</h1>
+<h1>{{ df.loc[0, 'UserName'] }}</h1>
+<h1>{{ df.loc[0, 'UserPwd'] }}</h1>
+<h1>{{ df.loc[0, 'Dept'] }}</h1>
+<br>
+<a href={{ url_for('.login_out') }}>退出</a>
+</body>
+</html>
